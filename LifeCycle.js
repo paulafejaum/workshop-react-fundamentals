@@ -34,6 +34,8 @@ class LifeCycle extends Component {
 
   // Exercise 7 - Change previous implementation to declarative form
 
+  // Exercise 8 - Change class component to function component
+
   render() {
     const { name } = this.data;
     return (
