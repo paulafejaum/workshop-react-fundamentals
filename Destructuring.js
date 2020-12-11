@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Image, StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 class Destructuring extends Component {
   constructor(props) {
