@@ -27,6 +27,26 @@ class App extends Component {
     const jobEnterprise = this.data.response.job.enterprise;
     const address = this.data.response.job.address;
 
+    // Exercise 1
+    // Get name, hairColour destructuring this.data object.
+
+    // Exercise 2
+    // Get favoriteFood from this.data. Chocolat is the default value.
+
+    // Exercise 3
+    // Get jobEnterprise and address destructuring from this.data.
+
+    // Exercise 4
+    // Change initialHairCoulour to hairColor of this.data
+    let initialHairCoulour = "Red";
+
+    // Exercise 5
+    // Get tattoo from this.data in a variable called hasTattoo;
+
+    // Exercise 6
+    // Populate object in the following format using destructuring:
+    // { employeeName, jobEntreprise, address}
+
     return (
       <View style={styles.app}>
         <View style={styles.header}>
