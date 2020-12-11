@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Button, Image, StyleSheet, Text, View } from "react-native";
 
 import Destructuring from './Destructuring';
 import LifeCycle from './LifeCycle';
