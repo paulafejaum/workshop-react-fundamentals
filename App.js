@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Destructuring from './Destructuring';
+import Destructuring from './final/Destructuring';
 import LifeCycle from './LifeCycle';
 import Variables from './Variables';
 
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
 
     return (
-      <Variables />
+      <Destructuring />
     );
   }
 }

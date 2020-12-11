@@ -8,7 +8,7 @@ class Destructuring extends Component {
     this.data = {
       response: {
         name: "Paula",
-        hairColor: "blond",
+        hairColor: "Blond",
         tattoo: true,
         job: {
           enterprise: "Banco do Brasil",
@@ -19,43 +19,52 @@ class Destructuring extends Component {
   }
 
   render() {
-    const name = this.data.response.name;
-    const hairColor = this.data.response.hairColor;
-    const hasTattoo = this.data.response.tattoo;
-    const jobEnterprise = this.data.response.job.enterprise;
-    const address = this.data.response.job.address;
+    const tattoo = this.data.response.tattoo;
 
     // Exercise 1
-    // Get name and hairColour destructuring this.data object.
+    // Get name, hairColour destructuring this.data object.
+    const { name, hairColor } = this.data.response;
+
 
     // Exercise 2
     // Get favoriteFood from this.data. Chocolat is the default value.
+    const { favoriteFood = 'chocolat' } = this.data.response;
 
     // Exercise 3
     // Get jobEnterprise and address destructuring from this.data.
+    const { job: { enterprise: jobEnterprise, address } } = this.data.response;
 
     // Exercise 4
     // Change initialHairCoulour to hairColor of this.data
-    let initialHairCoulor = "Red";
+    let initialHairColor = "Red";
+    ({ hairColor: initialHairColor } = this.data.response);
 
     // Exercise 5
     // Get tattoo from this.data in a variable called hasTattoo;
+    const { tatto: hasTattoo } = this.data.response;
 
     // Exercise 6
     // Populate object in the following format using destructuring:
     // { employeeName, jobEntreprise, address}
+    const newObject = {};
+    ({
+      name: newObject.employeeName,
+      job: { enterprise: newObject.jobEnterprise, address: newObject.address }
+    } = this.data.response
+    );
+
 
     return (
       <View style={styles.app}>
         <View style={styles.header}>
-          <Text style={styles.title}>{`${jobEnterprise} : ${address}`}</Text>
+          <Text style={styles.title}>{`${newObject.jobEnterprise} : ${newObject.address}`}</Text>
         </View>
         <View>
-          <Text style={styles.text}>Name: {name}</Text>
+          <Text style={styles.text}>Name: {newObject.employeeName}</Text>
           <Text style={styles.text}>Hair Colour: {hairColor}</Text>
           <Text style={styles.text}>Initial Hair Colour: {initialHairColor}</Text>
           <Text style={styles.text}>Tattoo: {hasTattoo ? "Yes" : "No"}</Text>
-          <Text style={styles.text}>Favorite Food: </Text>
+          <Text style={styles.text}>Favorite Food: {favoriteFood}</Text>
         </View>
       </View>
     );

@@ -11,11 +11,13 @@ class Variables extends Component {
 
   varFunction = () => {
     message = "Hello guys! We're talking about vars!";
-    var message;
+    var message; // This is a bad practice
     console.log(message);
 
+    // Exercise 1 - Declare var message
+
     for (var i = 0; i < 3; i++) {
-      // Exercise 1 - Change console.log to execute inside a setTimeout
+      // Exercise 2 - Change console.log to execute inside a setTimeout
       console.log(i);
     }
 
@@ -24,18 +26,20 @@ class Variables extends Component {
     } else {
       var falseMessage = "Inside false";
     }
-    // Exercise 2 - Print true message
-    // Exercise 3 - Print false message
-    // Exercise 4 - Change if to false and verify console
+    // Exercise 3 - Print true message
+    // Exercise 4 - Print false message
+    // Exercise 5 - Change if to false and verify console
   };
 
   letConstFunction = () => {
     message = "Hello guys! We're talking about let and const!";
-    let message;
+    let message; // This is a bad practice and won't work using typescript.
     console.log(message);
 
+    // Exercise 6 - Declare let message
+
     for (let i = 0; i < 3; i++) {
-      // Exercise 5 - Change console.log to execute inside a setTimeout
+      // Exercise 7 - Change console.log to execute inside a setTimeout
       console.log(i);
     }
 
@@ -44,10 +48,10 @@ class Variables extends Component {
     } else {
       var falseMessage = "Inside false";
     }
-    // Exercise 6 - Print true message
-    // Exercise 7 - Print false message
+    // Exercise 8 - Print true message
+    // Exercise 9 - Print false message
 
-    // Exercise 8 - Declare un uninitialized const variable
+    // Exercise 10 - Declare un uninitialized const variable
   };
 
   render() {
